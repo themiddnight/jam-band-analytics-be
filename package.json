@@ -1,0 +1,29 @@
+{
+  "name": "jam-band-analytics-be",
+  "module": "src/server.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "bun run --watch src/server.ts",
+    "start": "bun run src/server.ts",
+    "db:generate": "DRIZZLE_CONFIG=drizzle.config.ts drizzle-kit generate",
+    "db:migrate": "DRIZZLE_CONFIG=drizzle.config.ts drizzle-kit migrate",
+    "db:push": "DRIZZLE_CONFIG=drizzle.config.ts drizzle-kit push"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.5",
+    "drizzle-kit": "^0.31.7"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "drizzle-orm": "^0.44.7",
+    "express": "^5.1.0",
+    "postgres": "^3.4.7",
+    "zod": "^4.1.13"
+  }
+}
