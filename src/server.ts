@@ -5,6 +5,7 @@ import cors from "cors";
 import env from "./config/env";
 import healthRouter from "./routes/health";
 import analyticsRouter from "./routes/analytics";
+import feedbackRouter from "./routes/feedback";
 
 const app = express();
 
@@ -14,6 +15,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use("/", healthRouter);
 app.use("/", analyticsRouter);
+app.use("/", feedbackRouter);
 
 app.use((err: unknown, _req: Request, res: Response, _next: NextFunction) => {
   console.error(err);
