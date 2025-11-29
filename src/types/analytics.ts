@@ -4,6 +4,7 @@ export const analyticsEventSchema = z.object({
   eventName: z.string().min(1),
   userId: z.string().min(1),
   sessionId: z.string().optional(),
+  roomId: z.string().optional(),
   roomType: z.string().optional(),
   projectId: z.string().optional(),
   occurredAt: z.coerce.date().optional(),

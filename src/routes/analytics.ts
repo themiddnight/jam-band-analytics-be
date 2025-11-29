@@ -17,6 +17,7 @@ router.post("/analytics", apiKeyAuth, async (req, res, next) => {
       eventName: event.eventName,
       userId: event.userId,
       sessionId: event.sessionId ?? null,
+      roomId: event.roomId ?? null,
       roomType: event.roomType ?? null,
       projectId: event.projectId ?? null,
       payload: event.payload ?? null,
