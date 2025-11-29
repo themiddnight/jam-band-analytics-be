@@ -6,6 +6,7 @@ export const analyticsEvents = pgTable("analytics_events", {
   eventName: text("event_name").notNull(),
   userId: text("user_id").notNull(),
   sessionId: text("session_id"),
+  roomId: text("room_id"),
   roomType: text("room_type"),
   projectId: text("project_id"),
   payload: jsonb("payload"),
