@@ -15,6 +15,13 @@
       "when": 1764402236424,
       "tag": "0001_brief_wind_dancer",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1764432659663,
+      "tag": "0002_elite_shatterstar",
+      "breakpoints": true
     }
   ]
 }
