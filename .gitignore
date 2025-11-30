@@ -58,6 +58,8 @@ build/Release
 
 node_modules/
 jspm_packages/
+bun/
+bun.lockb
 
 # Snowpack dependency directory (https://snowpack.dev/)
 
@@ -66,6 +68,7 @@ web_modules/
 # TypeScript cache
 
 *.tsbuildinfo
+tsconfig.*.tsbuildinfo
 
 # Optional npm cache directory
 
@@ -143,6 +146,10 @@ dist
 # Serverless directories
 
 .serverless/
+
+# Database / ORM artifacts
+drizzle/meta/
+drizzle/*.sqlite
 
 # FuseBox cache
 
