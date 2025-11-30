@@ -147,10 +147,6 @@ dist
 
 .serverless/
 
-# Database / ORM artifacts
-drizzle/meta/
-drizzle/*.sqlite
-
 # FuseBox cache
 
 .fusebox/
