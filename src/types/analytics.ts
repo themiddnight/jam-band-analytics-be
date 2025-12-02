@@ -3,6 +3,8 @@ import { z } from "zod";
 export const analyticsEventSchema = z.object({
   eventName: z.string().min(1),
   userId: z.string().min(1),
+  isAuthenticated: z.boolean().optional().default(false),
+  authenticatedUserId: z.string().optional().nullable(),
   sessionId: z.string().optional(),
   roomId: z.string().optional(),
   roomType: z.string().optional(),
