@@ -19,6 +19,8 @@ export const feedbackFavoriteRoomSchema = z.enum(["perform", "arrange"]);
 
 export const feedbackSubmissionSchema = z.object({
   userId: z.string().min(1),
+  isAuthenticated: z.boolean().optional().default(false),
+  authenticatedUserId: z.string().optional().nullable(),
   sessionId: z.string().optional().nullable(),
   satisfactionScore: z.number().int().min(1).max(5),
   roles: z.array(feedbackRoleSchema).min(1),

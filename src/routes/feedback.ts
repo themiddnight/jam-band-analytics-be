@@ -15,6 +15,8 @@ router.post("/feedback", async (req, res, next) => {
 
     await db.insert(feedbackSubmissions).values({
       userId: data.userId,
+      isAuthenticated: data.isAuthenticated ?? false,
+      authenticatedUserId: data.authenticatedUserId ?? null,
       sessionId: data.sessionId ?? null,
       satisfactionScore: data.satisfactionScore,
       roles: data.roles,

@@ -1,10 +1,12 @@
-import { pgTable, uuid, text, jsonb, timestamp, integer } from "drizzle-orm/pg-core";
+import { pgTable, uuid, text, jsonb, timestamp, integer, boolean } from "drizzle-orm/pg-core";
 import { sql } from "drizzle-orm";
 
 export const analyticsEvents = pgTable("analytics_events", {
   id: uuid("id").primaryKey().default(sql`gen_random_uuid()`),
   eventName: text("event_name").notNull(),
   userId: text("user_id").notNull(),
+  isAuthenticated: boolean("is_authenticated").default(false).notNull(),
+  authenticatedUserId: text("authenticated_user_id"),
   sessionId: text("session_id"),
   roomId: text("room_id"),
   roomType: text("room_type"),
@@ -19,6 +21,8 @@ export const analyticsEvents = pgTable("analytics_events", {
 export const feedbackSubmissions = pgTable("feedback_submissions", {
   id: uuid("id").primaryKey().default(sql`gen_random_uuid()`),
   userId: text("user_id").notNull(),
+  isAuthenticated: boolean("is_authenticated").default(false).notNull(),
+  authenticatedUserId: text("authenticated_user_id"),
   sessionId: text("session_id"),
   satisfactionScore: integer("satisfaction_score").notNull(),
   roles: jsonb("roles").notNull(), // array of role strings

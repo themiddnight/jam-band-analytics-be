@@ -16,6 +16,8 @@ router.post("/analytics", apiKeyAuth, async (req, res, next) => {
     const values = events.map((event) => ({
       eventName: event.eventName,
       userId: event.userId,
+      isAuthenticated: event.isAuthenticated ?? false,
+      authenticatedUserId: event.authenticatedUserId ?? null,
       sessionId: event.sessionId ?? null,
       roomId: event.roomId ?? null,
       roomType: event.roomType ?? null,

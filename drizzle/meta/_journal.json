@@ -22,6 +22,13 @@
       "when": 1764432659663,
       "tag": "0002_elite_shatterstar",
       "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1764686888278,
+      "tag": "0003_workable_nekra",
+      "breakpoints": true
     }
   ]
 }
